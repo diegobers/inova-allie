@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-Br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Diego Bernardi">
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="{% static 'img/favicon.ico' %}">
+    <title>Bem Vindo!</title>
+  </head>
+  <body>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container">
+        <a class="navbar-brand" href="{% url 'index' %}">
+          <img src="{% static 'img/logo.jpeg' %}" alt="" style="width: 120px;" class="logo">
+        </a>        
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li> 
+          </ul> 
+        
+        </div>
+      </div>
+    </nav>
+      
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+  </body>
+</html> 
