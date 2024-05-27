@@ -12,29 +12,47 @@
     <title>Bem Vindo!</title>
   </head>
   <body>
-
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-      <div class="container">
-        <a class="navbar-brand" href="{% url 'index' %}">
-          <img src="{% static 'img/logo.jpeg' %}" alt="" style="width: 120px;" class="logo">
-        </a>        
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-auto">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li> 
-          </ul> 
-        
-        </div>
+    <nav class="navbar navbar-expand-lg bg-body-white sticky-top mx-5" aria-label="Template Navbar">
+      <a class="navbar-brand" href="{% url 'index' %}">
+        <img src="{% static 'img/logo.jpeg' %}" alt="" style="width: 120px;" class="logo">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#MynavbarHeader" aria-controls="MynavbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="MynavbarHeader">
+        <ul class="navbar-nav ms-auto">
+          <li class='nav-item'>
+            <a class='nav-link' href="{% url 'view_cart' %}">Sobre</a>
+          </li>
+          <li class='nav-item'>
+            <a class='nav-link' href="{% url 'login' %}">Entrar</a>
+          </li> 
+        </ul>
       </div>
     </nav>
-      
+    
+
+      <!-- Footer -->
+    <div class="container">
+      <div class="row pt-5 my-5 justify-content-center row-cols-1 row-cols-sm-2 row-cols-md-5 border-top border-secundary">
+        <div class="col">
+          <a href="{% url 'store:index' %}" class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none">
+          <img src="{% static 'img/favicon.ico' %}" alt="" class="logo">
+          </a>        
+        </div>
+        <div class="col">
+          <h5>Contato</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="https://web.whatsapp.com" target="_blank" class="nav-link p-0 text-body-secondary"><i class="fa-brands fa-whatsapp"></i> (48) 99999-9999</a></li>
+            <li class="nav-item mb-2"><a href="mailto:email@admin.com" class="nav-link p-0 text-body-secondary"><i class="fa-solid fa-envelope-circle-check"></i> email@admin.com</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="pt-2 pb-4 text-center border-top border-secundary">
+      Desenvolvido por <a href="https://github.com/diegobers" target="_blank"><i class="fa-brands fa-github"></i> Diego Bernardi</a>
+    </div>
+
     <script src="{% static 'js/bootstrap.min.js' %}"></script>
   </body>
 </html> 
